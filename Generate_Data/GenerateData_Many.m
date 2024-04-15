@@ -9,7 +9,7 @@ for k = 1: n
     fprintf('k = %d\n', k);
 
     % Make folder to hold timeseries
-    folder_name = sprintf('Noise5_Many/%d', k);
+    folder_name = sprintf('Data/Noise5_Many/%d', k);
     mkdir(folder_name);
 
     %==================================================
@@ -65,7 +65,7 @@ for k = 1: n
                 % Save Noise 5% data
                 YSol = ode4(@(t,y) NoisyOmega5Continuous_variation_func(t, y, mu), tRange, Y0);
                 tSol = tRange;
-                filename = sprintf('Noise5_Many/%d/NoiseOmega5_delta%.2f_omega%.2f_E%.2f_Pm%.4f_mu%.5f_t%.2f_deltaT%.5f_ConstantTimeStep.mat', k, delta0, omega0, E0, Pm0, mu, t2, delta_t);
+                filename = sprintf('Data/Noise5_Many/%d/NoiseOmega5_delta%.2f_omega%.2f_E%.2f_Pm%.4f_mu%.5f_t%.2f_deltaT%.5f_ConstantTimeStep.mat', k, delta0, omega0, E0, Pm0, mu, t2, delta_t);
                 save(filename, 'tSol', 'YSol');
             elseif j == 3
                 % % Save Noise 10% data

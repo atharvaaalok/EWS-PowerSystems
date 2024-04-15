@@ -58,6 +58,7 @@ for i = 1: length(mu_list)
     hold on
     plot(tSol, omegaSol);
     
+    title(sprintf('$$\\mu = %.5f$$', mu), 'Interpreter', 'Latex');
     xlabel('Time');
     ylabel('$$\\omega$$', 'Interpreter', 'Latex');
     
